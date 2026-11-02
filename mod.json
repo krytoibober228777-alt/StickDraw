@@ -1,0 +1,77 @@
+{
+	"geode": "5.2.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"version": "v1.0.0",
+	"id": "yourname.stickdraw",
+	"name": "Stick Draw",
+	"developer": "yourname",
+	"description": "Draw with sticks and circles in the editor. Pick any editor object for them.",
+	"tags": ["editor", "utility"],
+	"dependencies": {
+		"alphalaneous.editortab_api": {
+			"version": ">=2.0.0",
+			"required": true
+		}
+	},
+	"settings": {
+		"objects-header": {
+			"type": "title",
+			"name": "Objects"
+		},
+		"stick-object-id": {
+			"type": "int",
+			"default": 1,
+			"min": 1,
+			"name": "Stick object ID",
+			"description": "Object used for the sticks. Easier: select an object in the editor and press 'Stick = selected' in the tab."
+		},
+		"circle-object-id": {
+			"type": "int",
+			"default": 1,
+			"min": 1,
+			"name": "Circle object ID",
+			"description": "Object used for the circles (joints). Easier: select an object in the editor and press 'Circle = selected' in the tab."
+		},
+		"size-header": {
+			"type": "title",
+			"name": "Sizes"
+		},
+		"stick-thickness": {
+			"type": "float",
+			"default": 6,
+			"min": 0.5,
+			"max": 300,
+			"name": "Stick thickness",
+			"description": "Thickness of sticks in game units."
+		},
+		"circle-diameter": {
+			"type": "float",
+			"default": 14,
+			"min": 0.5,
+			"max": 300,
+			"name": "Circle diameter",
+			"description": "Diameter of circles in game units."
+		},
+		"snap-radius": {
+			"type": "float",
+			"default": 10,
+			"min": 1,
+			"max": 100,
+			"name": "Snap radius",
+			"description": "If you start/end a stick this close to an existing circle, it connects to that circle instead of making a new one."
+		},
+		"drag-threshold": {
+			"type": "float",
+			"default": 6,
+			"min": 1,
+			"max": 50,
+			"name": "Drag threshold (screen px)",
+			"description": "How far you must drag before it counts as a stick instead of a click that places a circle."
+		}
+	}
+}
